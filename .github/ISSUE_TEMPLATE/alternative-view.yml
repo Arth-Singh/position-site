@@ -1,0 +1,37 @@
+name: Send an alternative view
+description: Disagree, or agree for a different reason? Your view is printed in full once accepted.
+title: "View: "
+labels: ["alternative-view"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Views from people at labs, evaluators and funders are especially welcome. We print accepted views in full next to ours and may quote them in the paper's Alternative Views section with your permission.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Affiliation
+    validations:
+      required: true
+  - type: textarea
+    id: view
+    attributes:
+      label: Your view
+      description: A paragraph or a page. Say what you disagree with and what you would do instead.
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: Print this view publicly on the site under my name.
+          required: true
+        - label: The authors may quote it in the paper.
+          required: false

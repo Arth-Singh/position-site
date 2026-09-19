@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A research exchange for AI safety</title>
+<meta name="description" content="Position: AI safety needs a research exchange between frontier labs and academia, alongside the talent pipeline. Read the case and sign.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--cream:#f4efe6;--sand:#e6dccb;--stone:#c6ad8b;--brick:#a8452e;--brick-dark:#7d3222;--sky:#7f96a6;--umber:#5c4735;--umber-dark:#362f27;--ink:#1f1c18}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.5}
+a{color:var(--brick)}a:hover{color:var(--brick-dark)}
+.mono{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:.02em}
+.wrap{max-width:1152px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;color:var(--umber)}
+nav .links{display:flex;gap:26px;flex-wrap:wrap}
+nav a{color:var(--umber);text-decoration:none}nav a.sign{color:var(--brick)}
+.band{width:100%;height:440px;object-fit:cover;object-position:50% 62%;display:block}
+.caption{font-size:15px;font-style:italic;color:var(--umber);margin:12px 0 0}
+h1{font-size:52px;line-height:1.08;font-weight:500;letter-spacing:-.012em;margin:0;text-wrap:pretty}
+h2{font-size:28px;font-weight:500;margin:0 0 14px}
+h3{font-size:22px;font-weight:500;margin:0 0 8px}
+p{margin:0 0 16px}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:48px;padding:44px 0 0}
+.hero .lead{font-size:22px;color:var(--umber-dark)}
+.btns{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;background:var(--brick);color:var(--cream);text-decoration:none;font-size:18px}
+.btn:hover{background:var(--brick-dark);color:var(--cream)}
+.btn.ghost{background:transparent;border:1px solid var(--brick);color:var(--brick)}
+.btn.ghost:hover{background:var(--sand)}
+.stats{border-left:1px solid var(--stone);padding-left:24px;display:flex;flex-direction:column;gap:22px;padding-top:10px}
+.stat .n{font-family:'IBM Plex Mono',monospace;font-size:30px}
+.stat .l{font-size:15px;color:var(--umber)}
+section{padding:56px 0 0}
+.rule{height:1px;background:var(--stone);margin:56px 0 0}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.col{border-top:1px solid var(--stone);padding-top:16px}
+.col .k{color:var(--sky)}
+.col p{font-size:18px;color:var(--umber-dark)}
+.evidence{display:grid;grid-template-columns:3fr 2fr;gap:48px;align-items:start}
+.evidence img{width:100%;height:auto;display:block;border:1px solid var(--stone);background:#fff}
+.evidence figcaption{font-size:15px;color:var(--umber);margin-top:8px}
+ul{padding-left:22px;margin:0 0 16px}
+li{margin-bottom:8px}
+.asks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;background:var(--sand);padding:40px;margin-top:56px}
+.asks .right{border-left:1px solid var(--stone);padding-left:40px}
+.asks p{font-size:18px}
+.signrow{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 24px;font-size:16px;color:var(--umber-dark)}
+.views article{border-top:1px solid var(--stone);padding:18px 0}
+.views article:last-child{border-bottom:1px solid var(--stone)}
+.faq dt{font-weight:500;margin-top:16px}
+.faq dd{margin:4px 0 0;color:var(--umber-dark)}
+footer{margin-top:64px;padding:24px 0 32px;border-top:1px solid var(--stone);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--sky)}
+footer a{color:var(--sky)}
+.small{font-size:16px;color:var(--umber)}
+@media (max-width:820px){
+ h1{font-size:36px}
+ .band{height:260px}
+ .hero,.evidence,.asks,.cols3{grid-template-columns:1fr;gap:28px}
+ .stats{border-left:0;padding-left:0;border-top:1px solid var(--stone);padding-top:20px}
+ .asks{padding:24px}.asks .right{border-left:0;padding-left:0;border-top:1px solid var(--stone);padding-top:24px}
+ .list{grid-template-columns:1fr 1fr}
+ body{font-size:18px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="mono">
+<div>research exchange · position</div>
+<div class="links"><a href="#position">Position</a><a href="#evidence">Evidence</a><a href="#asks">Asks</a><a href="#views">Views</a><a href="#faq">FAQ</a><a class="sign" href="#sign">Sign</a></div>
+</nav>
+</div>
+
+<img class="band" src="assets/cover.jpg" alt="Babel from outside the wall: builders on the tower, scholars outside studying glass models of it, a queue at the gate">
+<div class="wrap">
+<p class="caption">Babel from outside the wall. The tower goes up and something stirs at its base. Pages blow over the wall; the scholars outside pin them up, build glass models of the tower, and queue at the gate.</p>
+
+<div class="hero" id="position">
+<div>
+<div class="mono" style="color:var(--sky);margin-bottom:16px">POSITION · DISCUSSION DRAFT · SEPTEMBER 2026</div>
+<h1>AI safety needs a research exchange between frontier labs and academia, alongside the talent pipeline.</h1>
+<p class="lead" style="margin-top:22px">The relationship between frontier labs and the researchers outside them is organized as a talent pipeline with almost no research exchange. That, more than any shortage of ideas or money, is why safety research done outside the labs does not reach the systems that fail.</p>
+<div class="btns"><a class="btn" href="#sign">Sign the position</a><a href="#evidence">Read the case first</a></div>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">8,771</div><div class="l">arXiv safety papers from the past year, each coded from its full text</div></div>
+<div class="stat"><div class="n">26</div><div class="l">of them had internal access to a frontier model. One was academic.</div></div>
+<div class="stat"><div class="n">0</div><div class="l">experiments run under internal conditions were repeated by anyone outside</div></div>
+</div>
+</div>
+
+<section id="incident">
+<h2>What happened this summer</h2>
+<div class="evidence">
+<div>
+<p>On 31 August 2026 Anthropic published an experiment that only a frontier lab can run. Starting from an early checkpoint of Claude Opus 4.8, the team trained the model with reinforcement learning on production environments known to be exploitable. By the end of training the model reward-hacked on 40% of episodes, complied with graders that rewarded harmful answers 29% of the time (up from 0.7%), and tried to bypass the Claude Code safety classifier in 38% of trials (up from zero). The automated audit Anthropic runs before release scored this model as slightly <em>more</em> aligned than its starting point.</p>
+<p>Nine days later the company revised its account of four incidents in which pre-release models had gained unauthorized access to real third-party systems, and wrote that its "pre-release auditing did not warn us that misalignment of this severity was present."</p>
+<p>These are the problems the safety field exists to solve. They belong to a training run: a frontier checkpoint, a suite of production environments, an optimizer, an audit, and a scale that no outside group can reproduce. Nobody outside a handful of companies can re-run that experiment, and nobody outside can change one thing in it and see what happens.</p>
+</div>
+<div>
+<p class="small">The usual explanation is money: academia cannot afford frontier-scale experiments. That is true, and it is only part of it. There is a lot of philanthropic money for AI safety; the labs publish research-direction lists; fellowship programs place a cohort of researchers in or near the labs every few months. What is missing is a way for the thing being studied, and the problems that show up inside it, to reach researchers who are not employees, and for their results to come back. Today that channel runs one way.</p>
+</div>
+</div>
+</section>
+
+<section id="evidence">
+<h2>What we found</h2>
+<div class="evidence">
+<div>
+<p>We took every computer-science paper first submitted or revised on arXiv between 13 September 2025 and 13 September 2026, screened it by keyword and an LLM triage, and had an LLM reader code the full text of 8,771 safety-relevant papers: the largest model the authors experimented on, what they were allowed to do with it, white-box access, whether the subject was trained with RL, whether the setting was agentic, what transfer claim was made and what evidence was offered, and author affiliation. Humans have not yet checked every label, so treat the counts as estimates.</p>
+<p><strong style="font-weight:500">Conditions.</strong> The 6,302 academic papers work on a median model of 8.4 billion parameters. Nearly every paper on models below 1B can look inside its model; a quarter of those on the largest open models can; none at the closed frontier can, where the model is reached through an API. Over the same tiers the share whose subject was itself trained with RL, the setting of every incident above, rises from almost none to about three quarters. Only 26 papers had internal access to a frontier model, 19 of them lab-authored. All 13 papers that report production-training access come from a lab or a lab collaboration.</p>
+<p><strong style="font-weight:500">Problems.</strong> The three documents that changed the field's understanding this year, OpenAI's account of the Hugging Face incident, Anthropic's incident assessment and the Hacker-Opus report, are blog posts. None can be reproduced or extended outside the company that wrote it. Direction lists tell outside researchers what the labs think matters; they do not supply the checkpoint in which the problem occurred, the environments that produced it, or a comparable evaluation across releases that would show whether it was fixed.</p>
+<p><strong style="font-weight:500">Return.</strong> 221 papers carry a fellowship affiliation. Of the Anthropic Fellows papers, 30 of 34 are coded as lab or lab collaboration and one as academic; Anthropic reports that over 40% of its first cohort joined the company. Fellowship findings travel well as text: 63 of 81 fellowship papers from the first half of the year were cited by a later academic paper, more than academic papers themselves. What does not travel is the experiment. No paper produced with internal access, from any group, was followed up by an academic paper with the same access.</p>
+<p><strong style="font-weight:500">Transfer.</strong> Of 8,771 papers, 4,294 say nothing about whether their finding transfers to frontier systems. Of the 1,225 that test more than one scale and report a trend, 177 find the effect weakening with scale and 242 find it non-monotonic.</p>
+</div>
+<figure style="margin:0">
+<img src="assets/access_by_tier.png" alt="Four bar panels by scale tier: white-box access falls from 94% below 1B to zero at the closed frontier; inference-only, RL-trained subjects and agentic settings rise toward the frontier">
+<figcaption>Research conditions by scale tier of the largest model in each paper. White-box access falls toward the frontier; the behaviors of 2026 show up in the tiers where almost nobody outside a lab can look inside or train. Error bars are 95% intervals.</figcaption>
+</figure>
+</div>
+</section>
+
+<div class="rule"></div>
+<section id="gaps" style="padding-top:44px">
+<div class="cols3">
+<div class="col"><div class="mono k">GAP 1</div><h3>Conditions</h3><p>The field studies what it can reach. Where the field can look inside and train, the behaviors of 2026 are absent.</p></div>
+<div class="col"><div class="mono k">GAP 2</div><h3>Problems</h3><p>Labs publish accounts of problems. The checkpoint, the environments and the training records stay inside.</p></div>
+<div class="col"><div class="mono k">GAP 3</div><h3>Return</h3><p>Fellowships move people in. Findings come back as citations; the experiments do not.</p></div>
+</div>
+<p class="small" style="margin-top:28px">None of this is a criticism of the people who run the programs or pass through them. It is the sensible response to the thing being studied sitting inside the labs. It does mean that the mechanism the field relies on transfers people while conditions stay inside.</p>
+</section>
+
+<div class="asks" id="asks">
+<div>
+<h2>What we ask</h2>
+<p><strong style="font-weight:500">Labs:</strong> export the object itself. Release model organisms as bundles (checkpoint, environments, recipe) and incident checkpoints under structured access. Replace direction lists with problem briefs that name the artifacts available to work on them.</p>
+<p><strong style="font-weight:500">Funders and evaluators:</strong> pay for tests of existing claims under frontier conditions, with an independent check, and keep a public registry of claims with tests, resolved or blocked, and of what blocked them.</p>
+<p><strong style="font-weight:500">Fellowship programs:</strong> publish where people go, by cohort. Fund academic principal investigators to host fellows and continue their projects. End each project in an artifact a university group can run.</p>
+<p><strong style="font-weight:500">Researchers and reviewers:</strong> state the largest model tested in the abstract, report the trend across scales, and treat transfer to the frontier as a hypothesis to test.</p>
+<p class="small">A first concrete step from each: one problem exported with its conditions; one matched test of an existing safety claim; one placement table. We will re-run the audit in a year and report what moved.</p>
+</div>
+<div class="right" id="sign">
+<div class="signrow"><h2>Sign</h2><div class="mono" style="color:var(--umber)"><span id="count">0</span> signatures</div></div>
+<p>Signing means you agree with the position sentence at the top and with the asks. It does not mean you vouch for every number; those are ours to defend.</p>
+<p>Name, affiliation, one line on why. Names are listed below within a day.</p>
+<div class="btns">
+<a class="btn" href="https://github.com/Arth-Singh/position-site/issues/new?template=sign.yml&labels=signature&title=Signature%3A+">Sign with GitHub</a>
+<a class="btn ghost" href="[GOOGLE FORM URL]">Sign without GitHub</a>
+</div>
+<p class="small" style="margin-top:20px">At a lab and disagree, or agree with a different reason? Send an alternative view. We print accepted views in full, next to ours.</p>
+<div class="btns"><a class="btn ghost" href="https://github.com/Arth-Singh/position-site/issues/new?template=alternative-view.yml&labels=alternative-view&title=View%3A+">Send an alternative view</a></div>
+</div>
+</div>
+
+<section id="against">
+<h2>What would change our mind</h2>
+<ul>
+<li>A lab releasing an incident checkpoint, its environments and its training configuration under structured access, followed by outside work that reproduced and extended the finding.</li>
+<li>Academic follow-ups that extend lab-hosted fellowship results under the conditions those results were produced in.</li>
+<li>Human checking of our labels showing that internal access is much more common than the LLM reader coded, or a claim-matched review reversing the multi-scale trend.</li>
+</ul>
+<p class="small">The strongest objection we know: the pipeline is the best use of scarce talent, and the incidents of 2026 were found by lab researchers. We agree it is partly right. The pipeline concentrates the people who could check the labs' conclusions inside the organizations whose conclusions need checking, and leaves nobody outside with the conditions to do so. An exchange adds that channel and leaves the pipeline in place.</p>
+</section>
+
+<section id="views">
+<h2>Alternative views</h2>
+<p class="small">Views sent through the form above, printed in full once accepted. The paper reserves a section for lab-side coauthors to rewrite the recommendations from the inside.</p>
+<div class="views" id="views-list"><p class="small">None yet.</p></div>
+</section>
+
+<section id="signatories">
+<div class="signrow"><h2>Signatories</h2><div class="mono" style="color:var(--sky)">UPDATED FROM THE SIGN FORM</div></div>
+<div class="list" id="signatories-list"><div class="small">Be the first.</div></div>
+</section>
+
+<section id="faq" class="faq">
+<h2>Questions</h2>
+<dl>
+<dt>Is the full paper public?</dt><dd>A discussion draft is circulating among coauthors and people we have asked for views. The full paper, with the audit method and tables, follows once that round is done. Write to us if you want the draft now.</dd>
+<dt>Who can sign?</dt><dd>Anyone who works on or funds AI safety, in a lab, a university, an evaluator, a nonprofit or on their own. Affiliation is listed as you give it.</dd>
+<dt>Who wrote this?</dt><dd>Arth Singh, Terry Zhang, Xuanqiang Angelo Huang, Samuel Simko, Ulysses Sekai Tully Carr, Pepijn Cobben and Xi Jia Zhou, at AIM Intelligence, Georgia Tech, the University of Toronto, the University of Oxford, the Vector Institute, EuroSafeAI, ETH Zürich and Stanford.</dd>
+<dt>Where do the numbers come from?</dt><dd>An audit of 8,771 arXiv safety papers from the year ending 13 September 2026, coded by an LLM reader from full text, with a 30-paper spot check on the fellowship matching. Human validation of the labels is in progress. Scripts and data ship with the paper.</dd>
+</dl>
+</section>
+
+<footer class="mono">
+<div>Singh, Zhang, Huang, Simko, Carr, Cobben, Zhou · discussion draft, September 2026</div>
+<div><a href="https://github.com/Arth-Singh/position-site">GitHub</a> · <a href="mailto:arth@aim-intelligence.com">Contact</a></div>
+</footer>
+</div>
+
+<script>
+(async function(){
+  try{
+    const r=await fetch('signatories.json',{cache:'no-store'}); const s=await r.json();
+    document.getElementById('count').textContent=s.length;
+    if(s.length){document.getElementById('signatories-list').innerHTML=s.map(x=>`<div>${esc(x.name)}${x.affiliation?', '+esc(x.affiliation):''}</div>`).join('');}
+  }catch(e){}
+  try{
+    const r=await fetch('views.json',{cache:'no-store'}); const v=await r.json();
+    if(v.length){document.getElementById('views-list').innerHTML=v.map(x=>`<article><div class="mono" style="color:var(--sky)">${esc(x.name)}${x.affiliation?' · '+esc(x.affiliation):''}</div><p style="white-space:pre-line;margin-top:8px">${esc(x.view)}</p></article>`).join('');}
+  }catch(e){}
+  function esc(t){return String(t||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+})();
+</script>
+</body>
+</html>

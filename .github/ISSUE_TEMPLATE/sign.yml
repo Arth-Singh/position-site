@@ -1,0 +1,48 @@
+name: Sign the position
+description: Add your name to the signatories list.
+title: "Signature: "
+labels: ["signature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Signing means you agree with the position sentence and the asks on the site. Your name and affiliation will be listed publicly within a day.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: As you want it listed
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Affiliation
+      placeholder: University, lab, evaluator, nonprofit, or independent
+    validations:
+      required: true
+  - type: dropdown
+    id: sector
+    attributes:
+      label: Where you work
+      options:
+        - Academia
+        - Frontier lab
+        - Other industry
+        - Evaluator or nonprofit
+        - Funder
+        - Government
+        - Independent
+    validations:
+      required: true
+  - type: input
+    id: why
+    attributes:
+      label: One line on why (optional)
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: List my name and affiliation publicly on the site.
+          required: true

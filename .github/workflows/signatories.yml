@@ -1,0 +1,34 @@
+name: Update signatories and views
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update:
+    if: contains(github.event.issue.labels.*.name, 'signature') || contains(github.event.issue.labels.*.name, 'accepted')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add the entry
+        env:
+          EVENT: ${{ toJson(github.event) }}
+        run: python3 scripts/add_entry.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add signatories.json views.json
+          git diff --cached --quiet || git commit -m "Add entry from issue #${{ github.event.issue.number }}"
+          git push
+      - name: Thank and close
+        if: contains(github.event.issue.labels.*.name, 'signature')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body "Thank you. Your name will appear on the site within a few minutes."
+          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }}
